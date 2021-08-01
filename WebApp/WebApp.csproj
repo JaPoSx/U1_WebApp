@@ -71,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="App_Data\setup.sql" />
+    <Content Include="Default.aspx" />
+    <Content Include="Final.aspx" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.js" />
@@ -78,6 +81,21 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\DataConnection.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Final.aspx.cs">
+      <DependentUpon>Final.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Final.aspx.designer.cs">
+      <DependentUpon>Final.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -85,9 +103,7 @@
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
